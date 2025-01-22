@@ -1,0 +1,6 @@
+@TaskHiveSyncs_HostAddress = http://localhost:5135
+
+GET {{TaskHiveSyncs_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
