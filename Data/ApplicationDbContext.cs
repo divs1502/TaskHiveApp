@@ -7,8 +7,8 @@ namespace TaskHiveSyncs.Data
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
-        public DbSet<User> Users { get; set; }
-        public DbSet<Post> Posts { get; set; }
+        public DbSet<User> users { get; set; }
+        public DbSet<Post> posts { get; set; }
 
     }
 }
