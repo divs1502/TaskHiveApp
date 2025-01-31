@@ -1,4 +1,5 @@
-﻿using TaskHiveSyncs.Data;
+﻿using GraphQL;
+using TaskHiveSyncs.Data;
 using TaskHiveSyncs.Models;
 
 namespace TaskHiveSyncs.Query
@@ -13,6 +14,12 @@ namespace TaskHiveSyncs.Query
         public async Task<IQueryable<Post>> GetPosts([Service] ApplicationDbContext dbContext)
         {
             return dbContext.posts.AsQueryable();
+        }
+
+        [Authorize]
+        public string GetSecureData()
+        {
+            return "This is secure data only accessible by authenticated users!";
         }
     }
 }

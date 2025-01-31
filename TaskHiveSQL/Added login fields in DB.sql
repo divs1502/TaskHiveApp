@@ -1,0 +1,7 @@
+ALTER TABLE users
+ADD COLUMN password_hash TEXT,
+ADD COLUMN password_salt TEXT;
+
+ALTER TABLE users
+ADD COLUMN is_active BOOLEAN DEFAULT TRUE;
+
